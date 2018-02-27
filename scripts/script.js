@@ -20,7 +20,10 @@ module.exports = function(robot) {
 
   robot.respond(/What's your favorite food?/, function(res) {
   return res.send("I'm a robot--I don't eat food!");
-  });
+  
+   robot.hear(/Hello!/, function(res) {
+  return res.send("Hi there!");
+});
  //   robot.respond(/(hi|hello| Hii) renu/i, function(msg) {
  //  return msg.send("Hey There!");
   // });
