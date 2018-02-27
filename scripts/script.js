@@ -18,8 +18,8 @@ module.exports = function(robot) {
 
     });
 
-    robot.respond(/(hi|hello) renu/i, function(msg) {
-   return msg.send("Howdy!");
+    robot.respond(/(hi|hello| Hii) renu/i, function(msg) {
+   return msg.send("Hey There!");
    });
 }
 
