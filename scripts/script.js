@@ -18,7 +18,7 @@ module.exports = function(robot) {
 
     });
 
-    robot.respond(/hi|hello/i, function(msg) {
+    robot.respond(/(hi|hello) renu/i, function(msg) {
    return msg.send("Howdy!");
    });
 }
