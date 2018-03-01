@@ -10,7 +10,7 @@
 // Commands:
 //
 
-module.exports = function(robot) {
+/*module.exports = function(robot) {
   //  YOUR CODE HERE
   //  Example
   robot.hear(/javascript/i, function(msg) {
@@ -29,6 +29,7 @@ module.exports = function(robot) {
  //  return msg.send("Hey There!");
   // });
 }
+*/
 module.exports = function(bot) {
 
 
@@ -43,12 +44,12 @@ module.exports = function(bot) {
         else if(msg.match[3]){
             return msg.send("Oh heck no");
         }
-    })
+    });
 
     //Catches a common misspelling of embarrass and 'embarrasses' people by calling them out
     bot.hear(/(embarass me|embarass)/i, function(msg) {
             return msg.reply("*embarrass..idiot")
-    })
+    });
 
     //Assigns array of different responses to a variable 'looks'
     var looks = ['like a 1','like a 5','like a 10', 'like Gods most wondrous creature','fug','Scrumtrulescent: definition- so great that any other word employed would be woefully insufficient, and would serve only to limit the sheer magnitude of the greatness intended as a descriptor']
@@ -56,7 +57,7 @@ module.exports = function(bot) {
     //Responds to the question: 'How do I look today?'and invokes msg.random with the 'looks' array as a parameter. 
     bot.respond(/(How do I look today\?)/i, function(msg) {
          return msg.send(msg.random(looks));
-     })
+     });
 }
 
 
