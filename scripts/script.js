@@ -48,6 +48,7 @@
      robot.hear(/(What is my Zodiac sign\?)/i, function(msg){
              return msg.reply("What month are you born?");
              
+             let month;
              switch (month){
              	case 'January':
              	console.log("Your Zodiac sign is Leo!");
