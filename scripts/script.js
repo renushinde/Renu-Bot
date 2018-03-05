@@ -47,17 +47,15 @@
 
      robot.hear(/(What is my Zodiac sign\?)/i, function(msg){
              return msg.reply("What month are you born?");
-             
+
              let month;
-             switch (month){
-             	case 'January':
-             	console.log("Your Zodiac sign is Leo!");
-             	break;
-             	case 'Feb' :
-             	console.log("Your Zodiac sign is cancer");
-             	break;
-             	default:
-             	console.log("Enter valid month");
+              if (month == January){
+             	return msg.reply("your zodiac sign is leo");
+             } else if (month == Feb) {
+             	return msg.reply("yor zodiac sign is virgo");
+             }
+             else{
+             	return msg.reply("enter a valid month");
              }
      });
 }
