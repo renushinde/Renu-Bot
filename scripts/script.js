@@ -30,27 +30,7 @@
   // });
 }
 */
-//module.exports = function(robot) {
- /*
 
-    //Catches  'curse' words and responds with an attempt at being amusing
-    robot.hear(/(damn.*)|(shit.*)|(hell)/i, function (msg) {
-        if(msg.match[1]){
-          return msg.send("It's getting real PG in here");
-        }
-        else if(msg.match[2]){
-            return msg.send("Excuse your language!");
-        }
-        else if(msg.match[3]){
-            return msg.send("Oh heck no");
-        }
-    });
-
-    //Catches a common misspelling of embarrass and 'embarrasses' people by calling them out
-    bot.hear(/(embarass me|embarass)/i, function(msg) {
-            return msg.reply("*embarrass..idiot")
-    });
-    */
 
     //Assigns array of different responses to a variable 'looks'
     module.exports = function(robot) {
@@ -62,8 +42,23 @@
      });
 
      robot.hear(/(embarass me|embarass)/i, function(msg) {
-            return msg.reply("*It's spelled as embarrass..");
+            return msg.reply("It's spelled as embarrass..");
     });
+
+     robot.hear(/(What is my Zodiac sign\?)/i, function(msg){
+             return msg.reply("What month are you born?");
+             
+             switch (month){
+             	case 'January':
+             	console.log("Your Zodiac sign is Leo!");
+             	break;
+             	case 'Feb' :
+             	console.log("Your Zodiac sign is cancer");
+             	break;
+             	default:
+             	console.log("Enter valid month");
+             }
+     });
 }
 
 
